@@ -2,7 +2,7 @@ const ErrorResponse = require('../utils/errorResponse')
 
 const errorHandler = (error,req,res,next) =>{
     let err = {...error}
-    err.message =err.message
+    err.message =error.message
 
     if(err.code == 11000){
         const mess = `Duplicate Field Value Enter`
